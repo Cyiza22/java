@@ -17,9 +17,18 @@ class GradeManager{
                 return i;
             }
         }
+        System.out.println("Grade not found");
         return -1;
     }
     static int getGrade(int[] grades, int index){
+        try{
+            if(index < 0 || index >= grades.length){
+                throw new ArrayIndexOutOfBoundsException("Index out of bounds");
+            }
+        }catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+            return -1;
+        }
         return grades[index];
     }
 }
