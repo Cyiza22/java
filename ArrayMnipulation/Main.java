@@ -27,6 +27,8 @@ class GradeManager{
             }
         }catch(ArrayIndexOutOfBoundsException e){
             System.out.println(e.getMessage());
+        }finally{
+            System.out.println("error occurred");
         }
         return grades[index];
     }
