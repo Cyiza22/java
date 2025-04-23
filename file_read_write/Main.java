@@ -1,3 +1,4 @@
+package file_read_write;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -16,8 +17,8 @@ public class Main {
         student2.print();
         student3.print();
         student4.print();
-        String fileLocation = "C:\\Users\\USER\\Documents\\GitHub\\java\\file_read_write\\src\\student.txt";
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation))) {
+        String fileLocation = "C:\\Users\\USER\\Documents\\GitHub\\java\\file_read_write\\student.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileLocation , true))) {
             writer.write(student1.toString() + "\n");
             writer.write(student2.toString() + "\n");
             writer.write(student3.toString() + "\n");

@@ -13,15 +13,15 @@ class Bitcoin {
 }
 
 class CreditCard {
-    // Just a stub class for demonstration
+    //for demonstration
 }
 
 class PayPal {
-    // Just a stub class for demonstration
+    // for demonstration
 }
 
 class ApplePay {
-    // Just a stub class for demonstration
+    // for demonstration
 }
 
 class PaymentProcessor {
