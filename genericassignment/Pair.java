@@ -13,6 +13,10 @@ public class Pair<K, V> {
         this.value = value;
     }
 
+    public static <K, V> Pair<K, V> create(K key, V value) {
+        return new Pair<K, V>(key, value);
+    }
+
     public K getKey() {
         return key;
     }
