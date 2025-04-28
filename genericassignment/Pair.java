@@ -1,15 +1,10 @@
 package genericassignment;
 import java.util.Objects;
 
-// Pair.java
-
-import java.util.Objects;
-
 public class Pair<K, V> {
     private K key;
     private V value;
 
-    // Constructor
     public Pair(K key, V value) {
         if (key == null) {
             throw new IllegalArgumentException("Key cannot be null");
@@ -18,34 +13,43 @@ public class Pair<K, V> {
         this.value = value;
     }
 
-    // Getter for key
     public K getKey() {
         return key;
     }
 
-    // Getter for value
     public V getValue() {
         return value;
     }
 
-    // toString method
+    public void setKey(K key) {
+        if (key == null) {
+            throw new IllegalArgumentException("Key cannot be null");
+        }
+        this.key = key;
+    }
+
+    public void setValue(V value) {
+        this.value = value;
+    }
+
     public String toString() {
         return "(Key: " + key + ", Value: " + value + ")";
     }
 
-    // equals method
-    public boolean equals(Object o) {
-        if (this == o) {
+    public boolean equals(Object obj) {
+        if (this == obj) {
             return true;
         }
-        if (!(o instanceof Pair)) {
+        if (obj == null) {
             return false;
         }
-        Pair<?, ?> other = (Pair<?, ?>) o;
-        return Objects.equals(key, other.key) && Objects.equals(value, other.value);
+        if (!(obj instanceof Pair)) {
+            return false;
+        }
+        Pair other = (Pair) obj;
+        return Objects.equals(this.key, other.key) && Objects.equals(this.value, other.value);
     }
 
-    // hashCode method
     public int hashCode() {
         return Objects.hash(key, value);
     }
