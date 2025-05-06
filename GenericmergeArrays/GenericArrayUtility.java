@@ -5,7 +5,8 @@ public class GenericArrayUtility {
 
     public static <T> T[] mergeArrays(T[] a, T[] b) {
         if (a == null || b == null) {
-            throw new IllegalArgumentException("Input arrays cannot be null");
+            
+            return (T[]) new Object[0];
         }
         if (a.length == 0) {
             return Arrays.copyOf(b, b.length);

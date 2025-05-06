@@ -24,6 +24,13 @@ public class Main {
         String[] mergedStringArray = GenericArrayUtility.mergeArrays(firstStringArray, secondStringArray);
         System.out.print("Merged String Array: ");
         printArray(mergedStringArray);
+
+        //null array
+        String[] firstNullArray = null;
+        String[] secondNullArray = null;
+        String[] mergedNullArray = GenericArrayUtility.mergeArrays(firstNullArray, secondNullArray);
+        System.out.print("Merged Null Array: ");
+        printArray(mergedNullArray);
     }
     public static <T> void printArray(T[] array) {
         System.out.print("[");
