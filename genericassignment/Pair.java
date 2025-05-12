@@ -37,7 +37,7 @@ public class Pair<K, V> {
     }
 
     public String toString() {
-        return "(Key: " + key + ", Value: " + value + ")";
+        return "key: " + key + ", value: " + value;
     }
 
     public boolean equals(Object obj) {
